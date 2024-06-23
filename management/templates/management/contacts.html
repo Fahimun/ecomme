@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <p>management contacts page</p>
+    <p>Management contacts page</p>
     <!DOCTYPE html>
 <html>
 <head>
@@ -37,14 +37,16 @@ tr:nth-child(even) {
     <th>Name</th>
     <th>Age</th>
     <th>Phone</th>
-    <th>Addrss</th>
+    <th>Address</th>
+    <th>Created_at</th>
   </tr>
-{% for contact in contacts %}
+  {% for contact in contacts %}
   <tr>
-    <td>{{contact.Name}}</td>
-    <td>{{contact.Age}}</td>
-    <td>{{contact.Phone}}</td>
-    <td>{{contact.Address}}</td>
+    <td><a href="/contacts/detail/{{contact.id}}">{{contact.name}}</td></a>
+    <td>{{contact.age}}</td>
+    <td>{{contact.phone}}</td>
+    <td>{{contact.address}}</td>
+    <td>{{contact.created_at}}</td>
   </tr>
   {% endfor %}
 

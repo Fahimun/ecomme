@@ -32,8 +32,12 @@ def contacts(request):
 
     }
 
-    print(type (contacts))
-    return render(request,'management/contacts.html')
+    # print(type (contacts))
+    return render(request,'management/contacts.html',context)
+
+def detail(request):
+    # contact = Contact.objects.get(id=id)
+    return render(request,'management/detail.html')
 
 
 
